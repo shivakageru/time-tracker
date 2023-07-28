@@ -1,0 +1,17 @@
+pipeline {
+    agent any
+    environment {
+        myname= 'shivakageru'
+        DB_ENGINE= 'sql'
+        DISABLE_PUTH= 'true'
+    }
+    stages {
+        stage ('Hallo Jenkins') {
+            steps {
+                echo "Hallow everyone my name is $myname"
+                echo "Database engine is $DB_ENGINE"
+                echo "Authentication type is $DISABLE_PUTH"
+                echo "jenkins url is $JENKINS_URL"
+            }
+        }
+}
